@@ -1,8 +1,16 @@
 # Q0: Why is this error being thrown?
 
+Without a model for pokemon, the look up method "Pokemon.where" would not exist, as Pokemon 
+refers to something that doesn't exist yet.
+
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
 
+These pokemon are randomly selected from the pokemon model. All pokemont that are selected to not 
+belong to any trainer.
+
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
+
+This creates a button which, upon being clicked, calls the method at capture_path (which points to the capture method in the pokemon controller), and passes the pokemon's id as an argument. This is a patch call.
 
 # Question 3: What would you name your own Pokemon?
 
