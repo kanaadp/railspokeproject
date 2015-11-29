@@ -10,3 +10,6 @@
       <% end %>
     </tbody>
   </table>
+<% if @trainer == current_trainer %>
+  <%= button_to "Create a new Pokemon!", new_path, :class => "button medium", :method => :get %>
+<% end %>

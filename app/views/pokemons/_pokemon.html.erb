@@ -1,4 +1,9 @@
+<% if pokemon.trainer != current_trainer and pokemon.health > 0 or pokemon.trainer == current_trainer%>
 <td><%= pokemon.name %></td>
 <td><%= pokemon.level %></td>
 <td><%= pokemon.health %></td>
 <td><%= button_to "Damage!", damage_path(id: pokemon), :class => "button medium", :method => :patch %></td>
+<% if pokemon.trainer == current_trainer %>
+<td><%= button_to "Heal!", heal_path(id: pokemon), :class => "button medium", :method => :patch %></td>
+<% end %>
+<% end %>
